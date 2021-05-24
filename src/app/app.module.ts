@@ -7,6 +7,7 @@ import { VideojuegoComponent } from './videojuego/videojuego.component';
 import { GenerosMusicalesComponent } from './generos-musicales/generos-musicales.component';
 import { CursosComponent } from './cursos/cursos.component';
 import { CardComponent } from './card/card.component';
+import { ZapatillasComponent } from './zapatillas/zapatillas.component';
 
 @NgModule({
   declarations: [
@@ -14,7 +15,8 @@ import { CardComponent } from './card/card.component';
     VideojuegoComponent,
     GenerosMusicalesComponent,
     CursosComponent,
-    CardComponent
+    CardComponent,
+    ZapatillasComponent
   ],
   imports: [
     BrowserModule,

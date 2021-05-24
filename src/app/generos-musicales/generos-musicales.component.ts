@@ -22,7 +22,7 @@ export class GenerosMusicalesComponent implements OnInit, DoCheck, OnDestroy {
         console.log("Generos musicales DoCheck working!!")
     }
     ngOnDestroy(): void{
-        console.log("Generos musicales OnDestroy working!!")
+        console.log("Generos musicales OnDestroy")
     }
     changeTitle(){
         this.title = "Nuevo título"
