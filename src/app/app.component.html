@@ -351,7 +351,8 @@
     </svg>
   </div>
   <h1>Vamos a aprender Angular</h1>
-  <generos-musicales></generos-musicales>
+  <!-- <button (click)="ocultar_generos_musicales()">Ocultar</button> -->
+  <generos-musicales *ngIf="mostrar_generos_musicales"></generos-musicales>
   <!-- Resources -->
   <h2>Resources</h2>
   <p>Here are some links to help you get started:</p>
@@ -418,24 +419,24 @@
 
       <span>Run and Watch Tests</span>
     </div>
-
+    
     <div class="card card-small" (click)="selection.value = 'build'" tabindex="0">
       <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"/></svg>
-
+      
       <span>Build for Production</span>
     </div>
   </div>
-
+  
   <!-- Terminal -->
   <div class="terminal" [ngSwitch]="selection.value">
-      <pre *ngSwitchDefault>ng generate component xyz</pre>
-      <pre *ngSwitchCase="'material'">ng add @angular/material</pre>
-      <pre *ngSwitchCase="'pwa'">ng add @angular/pwa</pre>
-      <pre *ngSwitchCase="'dependency'">ng add _____</pre>
-      <pre *ngSwitchCase="'test'">ng test</pre>
-      <pre *ngSwitchCase="'build'">ng build</pre>
+    <pre *ngSwitchDefault>ng generate component xyz</pre>
+    <pre *ngSwitchCase="'material'">ng add @angular/material</pre>
+    <pre *ngSwitchCase="'pwa'">ng add @angular/pwa</pre>
+    <pre *ngSwitchCase="'dependency'">ng add _____</pre>
+    <pre *ngSwitchCase="'test'">ng test</pre>
+    <pre *ngSwitchCase="'build'">ng build</pre>
   </div>
-
+  
   <!-- Links -->
   <div class="card-container">
     <a class="circle-link" title="Animations" href="https://angular.io/guide/animations" target="_blank" rel="noopener">
@@ -447,6 +448,8 @@
         <path id="Path_19" data-name="Path 19" d="M4137.529,1027.283l-7.7-3.723,4.417-2.721,7.753,3.723Z" transform="translate(-4125.003 -1015.199)" fill="#fff"/>
       </svg>
     </a>
+    
+    <videojuego></videojuego>
 
     <a class="circle-link" title="CLI" href="https://cli.angular.io/" target="_blank" rel="noopener">
       <svg xmlns="http://www.w3.org/2000/svg" width="21.762" height="23.447" viewBox="0 0 21.762 23.447">

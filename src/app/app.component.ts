@@ -6,5 +6,10 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Aprendiendo Angular';
+  public title = 'Aprendiendo Angular';
+  public mostrar_generos_musicales: boolean = true
+
+  ocultarGenerosMusicales(){
+    this.mostrar_generos_musicales = false
+  }
 }

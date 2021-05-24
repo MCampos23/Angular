@@ -1,11 +1,11 @@
-import { Component , OnInit} from '@angular/core'
+import { Component , OnInit, DoCheck, OnDestroy} from '@angular/core'
 
 @Component({
     selector:'generos-musicales',
     templateUrl: './generos-musicales.component.html'
 })
 
-export class GenerosMusicalesComponent implements OnInit {
+export class GenerosMusicalesComponent implements OnInit, DoCheck, OnDestroy {
     public title: string 
     public subTitle: string 
     
@@ -15,7 +15,16 @@ export class GenerosMusicalesComponent implements OnInit {
 
         console.log("The component is working!!")
     }
-    ngOnInit(){
-        console.log("OnInit working!!")
+    ngOnInit(): void{
+        console.log("Generos musicales OnInit working!!")
+    }
+    ngDoCheck(): void{
+        console.log("Generos musicales DoCheck working!!")
+    }
+    ngOnDestroy(): void{
+        console.log("Generos musicales OnDestroy working!!")
+    }
+    changeTitle(){
+        this.title = "Nuevo título"
     }
 }
