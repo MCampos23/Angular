@@ -1,1 +1,7 @@
-<p>zapatillas works!</p>
+<h3>Zapatillas works!</h3>
+<ul>
+    <li *ngFor="let deportiva of zapatillas">{{deportiva.nombre}} - <strong>{{deportiva.precio}}</strong>
+    <span *ngIf="deportiva.precio <= 80" 
+    [style.background]="!deportiva.stock ? 'red' : 'green'"> ¡ OFERTA !</span></li>
+
+</ul>

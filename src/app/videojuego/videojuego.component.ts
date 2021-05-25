@@ -7,6 +7,6 @@ import { Component, OnInit } from '@angular/core'
 
 export class VideojuegoComponent implements OnInit{
     ngOnInit(): void{
-        console.log("videojuego On Init working!!!")
+        //console.log("videojuego On Init working!!!")
     }
 }

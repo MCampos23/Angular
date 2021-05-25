@@ -10,7 +10,7 @@ export class CardComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    console.log("Card On Init working!!!")
+    //console.log("Card On Init working!!!")
   }
 
 }

@@ -13,16 +13,16 @@ export class GenerosMusicalesComponent implements OnInit, DoCheck, OnDestroy {
         this.title = "Géneros Musicales" 
         this.subTitle = "Estos son los mejores géneros musicales"
 
-        console.log("The component is working!!")
+       // console.log("The component is working!!")
     }
     ngOnInit(): void{
-        console.log("Generos musicales OnInit working!!")
+        //console.log("Generos musicales OnInit working!!")
     }
     ngDoCheck(): void{
-        console.log("Generos musicales DoCheck working!!")
+       // console.log("Generos musicales DoCheck working!!")
     }
     ngOnDestroy(): void{
-        console.log("Generos musicales OnDestroy")
+        //console.log("Generos musicales OnDestroy")
     }
     changeTitle(){
         this.title = "Nuevo título"
