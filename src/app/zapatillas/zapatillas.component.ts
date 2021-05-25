@@ -7,8 +7,13 @@ import { Zapatilla } from 'src/app/models/zapatilla'
   styleUrls: ['./zapatillas.component.scss']
 })
 export class ZapatillasComponent implements OnInit {
-  public zapatillas: Array<Zapatilla>
+  public zapatillas: Array<Zapatilla>;
+  public mi_marca: string;
+  public marcas: string[]
+
   constructor() { 
+    this.marcas = new Array
+    this.mi_marca = "fila"
     this.zapatillas = [
       new Zapatilla('Reebok Classic', 'Reebok', 'Blanco', 80, true),
       new Zapatilla('Runner', 'Nike', 'Negro', 60, true),
@@ -17,9 +22,26 @@ export class ZapatillasComponent implements OnInit {
     ]
 
   }
-
+  
   ngOnInit(): void {
     console.log(this.zapatillas)
+    this.getMarcas()
   }
+  
+  getMarcas(){
+    this.zapatillas.forEach((zapatilla, index)=> {
+      if(this.marcas.indexOf(zapatilla.marca) < 0) this.marcas.push(zapatilla.marca)
+      console.log(index)
+    })
+    console.log(this.marcas)
+  }
+  
+  getMarca(){
+    alert(this.mi_marca)
+  }
+  addMarca(){
+    this.marcas.push(this.mi_marca)
+  }
+
 
 }

@@ -1,7 +1,21 @@
 <h3>Zapatillas works!</h3>
+<p>Añadir marca</p>
+<p><input type="text" [(ngModel)]="mi_marca"></p>
+<button (click)="getMarca()">Mostrar marca</button>
+<button (click)="addMarca()">Añadir marca</button>
+<p>{{mi_marca}}</p>
+
+<p>Compra las zapatillas de las mejores marcas</p>
 <ul>
-    <li *ngFor="let deportiva of zapatillas">{{deportiva.nombre}} - <strong>{{deportiva.precio}}</strong>
+    <li *ngFor="let marca of marcas; let indice = index">{{indice}} - {{marca}}</li>
+</ul>
+<p>En stock:</p>
+<ul>
+    <li *ngFor="let deportiva of zapatillas">{{ deportiva.marca}} - {{deportiva.modelo}} - <strong>{{deportiva.precio}} € </strong>
     <span *ngIf="deportiva.precio <= 80" 
-    [style.background]="!deportiva.stock ? 'red' : 'green'"> ¡ OFERTA !</span></li>
+    [style.background]="!deportiva.stock ? 'red' : 'green'"> ¡ OFERTA !</span>
+    <span *ngIf="deportiva.stock"> ¡ En stock !</span>
+        
+</li>
 
 </ul>

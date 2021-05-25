@@ -13,7 +13,7 @@ export class Zapatilla{
     //     this.stock
     // }
     constructor(
-    public nombre: string,
+    public modelo: string,
     public marca: string,
     public color: string,
     public precio: number,
