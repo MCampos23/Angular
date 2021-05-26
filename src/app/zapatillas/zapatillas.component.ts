@@ -23,24 +23,24 @@ export class ZapatillasComponent implements OnInit {
       new Zapatilla('Air-max', 'Nike', 'Rojas', 110, true)
     ]
   }
-  
-  ngOnInit(): void {
+    ngOnInit(): void {
     console.log(this.zapatillas)
     this.getMarcas()
   }
-  
-  getMarcas(){
+    getMarcas(){
     this.zapatillas.forEach((zapatilla, index)=> {
       if(this.marcas.indexOf(zapatilla.marca) < 0) this.marcas.push(zapatilla.marca)
       console.log(index)
     })
     console.log(this.marcas)
   }
-  
   getMarca(){
     alert(this.mi_marca)
   }
   addMarca(){
     this.marcas.push(this.mi_marca)
+  }
+  borrarMarca(indice: number){
+    this.marcas.splice(indice, 1)
   }
 }
