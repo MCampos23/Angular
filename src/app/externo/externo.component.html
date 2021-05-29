@@ -1,5 +1,9 @@
 <input type="text" [(ngModel)]="userId" (keyup.enter)="cargaUsuario()">
 
+{{'Hola mundo usando pipes' | uppercase}}
+
+{{ 235.45 | currency:'EUR':'Euros' }}
+
 <div *ngIf="!user">Cargando...</div>
 <p>{{ date | date:'shortTime'}}</p>
 <div *ngIf="user">
