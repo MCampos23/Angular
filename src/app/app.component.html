@@ -1,1 +1,14 @@
-<zapatillas></zapatillas>
+<h1>Angular Router App</h1>
+<!-- This nav gives you links to click, which tells the router which route to use (defined in the routes constant in  AppRoutingModule) -->
+<nav>
+  <ul>
+    <li><a routerLink="/zapatillas" routerLinkActive="active">Zapatillas</a></li>
+    <li><a routerLink="/cursos" routerLinkActive="active">Cursos</a></li>
+    <li><a routerLink="/generos-musicales" routerLinkActive="active">Géneros Musicales</a></li>
+    <li><a routerLink="/videojuegos" routerLinkActive="active">Videojuegos</a></li>
+    <li><a routerLink="/externo" routerLinkActive="active">Externo</a></li>
+  </ul>
+</nav>
+<!-- The routed views render in the <router-outlet>-->
+<router-outlet></router-outlet>
+<app-home></app-home>

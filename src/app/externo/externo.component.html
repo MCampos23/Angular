@@ -1,0 +1,8 @@
+<input type="text" [(ngModel)]="userId" (keyup.enter)="cargaUsuario()">
+
+<div *ngIf="!user">Cargando...</div>
+<p>{{ date | date:'dd/MM/yy'}}</p>
+<div *ngIf="user">
+    <img src="{{user.avatar}}" width="200px">
+    <h1>{{ user.first_name + ' ' + user.last_name }}</h1>
+</div> 
