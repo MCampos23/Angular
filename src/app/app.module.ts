@@ -12,6 +12,7 @@ import { CardComponent } from './card/card.component';
 import { ZapatillasComponent } from './zapatillas/zapatillas.component';
 import { HomeComponent } from './home/home.component';
 import { ExternoComponent } from './externo/externo.component';
+import { ContactoComponent } from './contacto/contacto.component';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ExternoComponent } from './externo/externo.component';
     CardComponent,
     ZapatillasComponent,
     HomeComponent,
-    ExternoComponent
+    ExternoComponent,
+    ContactoComponent
   ],
   imports: [
     BrowserModule,
